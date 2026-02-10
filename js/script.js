@@ -14,9 +14,10 @@ function  getHumanChoice(){
     zaza = prompt('choose sth',"");
     return zaza.toLowerCase();
 }
-    let humanScore = 0;
-    let computerScore = 0;
+
 function playGame(){
+        let humanScore = 0;
+    let computerScore = 0;
     for (let i = 0 ; i < 5 ; i++){
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
@@ -51,7 +52,12 @@ else if (humanChoice === 'scissors' && computerChoice === 'paper') {
 }
 }
 
-console.log(`your score is ${humanScore}`);
+console.log(`Final Score -> You: ${humanScore} | Computer: ${computerScore}`);
+if (humanScore > computerScore){
+    console.log('CONGRATULATIONS! You won the game!')
+} else if(humanScore < computerScore) {
+    console.log('GAME OVER! You lost the game')
+} else console.log('It`s a DRAW!!!')
 }
 
 
